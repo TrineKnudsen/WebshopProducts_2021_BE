@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{903A837C-8F94-49C3-9A9C-58F4054C34E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsak.WebshopProducts2021.WebApi", "Tsak.WebshopProducts2021.WebApi\Tsak.WebshopProducts2021.WebApi.csproj", "{1D974DA5-2ED8-4C4A-B35D-0CCB95F45EC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6BE29194-1FF7-4119-8BF2-2C44D580BA77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core.Test", "Core.Test", "{104BBE67-4481-4C1D-BF88-187674A5551A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsak.WebshopProducts_2021_BE.Core", "Tsak.WebshopProducts_2021_BE.Core\Tsak.WebshopProducts_2021_BE.Core.csproj", "{E03CB1C4-B7DE-496F-BE03-2C8BAFE5C79D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsak.WebshopProducts_2021_BE.Core.Test", "Tsak.WebshopProducts_2021_BE.Core.Test\Tsak.WebshopProducts_2021_BE.Core.Test.csproj", "{F79454D4-CE4B-4AFC-A8FA-77F5290BF50F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsak.WebshopProducts_2021_BE.Domain", "Tsak.WebshopProducts_2021_BE.Domain\Tsak.WebshopProducts_2021_BE.Domain.csproj", "{B197080C-6D36-490D-96B9-8B77D66D35B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsak.WebshopProducts_2021_BE.Domain.Test", "Tsak.WebshopProducts_2021_BE.Domain.Test\Tsak.WebshopProducts_2021_BE.Domain.Test.csproj", "{B950DAE8-E0FE-4D8B-B314-20BBA8B8233D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D974DA5-2ED8-4C4A-B35D-0CCB95F45EC5} = {903A837C-8F94-49C3-9A9C-58F4054C34E0}
+		{E03CB1C4-B7DE-496F-BE03-2C8BAFE5C79D} = {6BE29194-1FF7-4119-8BF2-2C44D580BA77}
+		{F79454D4-CE4B-4AFC-A8FA-77F5290BF50F} = {104BBE67-4481-4C1D-BF88-187674A5551A}
+		{B197080C-6D36-490D-96B9-8B77D66D35B8} = {6BE29194-1FF7-4119-8BF2-2C44D580BA77}
+		{B950DAE8-E0FE-4D8B-B314-20BBA8B8233D} = {104BBE67-4481-4C1D-BF88-187674A5551A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D974DA5-2ED8-4C4A-B35D-0CCB95F45EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D974DA5-2ED8-4C4A-B35D-0CCB95F45EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D974DA5-2ED8-4C4A-B35D-0CCB95F45EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D974DA5-2ED8-4C4A-B35D-0CCB95F45EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03CB1C4-B7DE-496F-BE03-2C8BAFE5C79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03CB1C4-B7DE-496F-BE03-2C8BAFE5C79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03CB1C4-B7DE-496F-BE03-2C8BAFE5C79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03CB1C4-B7DE-496F-BE03-2C8BAFE5C79D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79454D4-CE4B-4AFC-A8FA-77F5290BF50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79454D4-CE4B-4AFC-A8FA-77F5290BF50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79454D4-CE4B-4AFC-A8FA-77F5290BF50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79454D4-CE4B-4AFC-A8FA-77F5290BF50F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B197080C-6D36-490D-96B9-8B77D66D35B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B197080C-6D36-490D-96B9-8B77D66D35B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B197080C-6D36-490D-96B9-8B77D66D35B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B197080C-6D36-490D-96B9-8B77D66D35B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B950DAE8-E0FE-4D8B-B314-20BBA8B8233D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B950DAE8-E0FE-4D8B-B314-20BBA8B8233D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B950DAE8-E0FE-4D8B-B314-20BBA8B8233D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B950DAE8-E0FE-4D8B-B314-20BBA8B8233D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
