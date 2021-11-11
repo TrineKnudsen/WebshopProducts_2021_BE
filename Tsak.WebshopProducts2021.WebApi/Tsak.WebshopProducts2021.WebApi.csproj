@@ -5,8 +5,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.12" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Tsak.WebshopProducts2021.DataAccess\Tsak.WebshopProducts2021.DataAccess.csproj" />
+      <ProjectReference Include="..\Tsak.WebshopProducts_2021_BE.Domain\Tsak.WebshopProducts_2021_BE.Domain.csproj" />
     </ItemGroup>
 
 </Project>
