@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Tsak.WebshopProducts_2021_BE.Core.IServices;
 using Tsak.WebshopProducts_2021_BE.Core.Models;
@@ -23,6 +24,11 @@ namespace Tsak.WebshopProducts_2021_BE.Domain.Services
         public List<Product> GetAll()
         {
             return _productRepository.ReadAll();
+        }
+
+        public Product Create(Product product)
+        {
+            return _productRepository.Create(product);
         }
     }
 }

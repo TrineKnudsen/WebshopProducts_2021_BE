@@ -2,6 +2,7 @@
 using System.Linq;
 using Tsak.WebshopProducts_2021_BE.Core.Models;
 using Tsak.WebshopProducts_2021_BE.Domain.IRepositories;
+using Tsak.WebshopProducts2021.DataAccess.Entities;
 
 namespace Tsak.WebshopProducts2021.DataAccess.Repositories
 {
@@ -21,6 +22,22 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
                     Name = pe.Name
                 })
                 .ToList();
+        }
+
+        public Product Create(Product product)
+        {
+            ProductEntity productEntity = new ProductEntity
+            {
+                Id = product.Id,
+                Name = product.Name
+            };
+            _ctx.Products.Add(productEntity);
+
+            return new Product
+            {
+                Id = productEntity.Id,
+                Name = productEntity.Name
+            };
         }
     }
 }

@@ -6,5 +6,6 @@ namespace Tsak.WebshopProducts_2021_BE.Domain.IRepositories
     public interface IProductRepository
     {
         List<Product> ReadAll();
+        Product Create(Product product);
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using Tsak.WebshopProducts_2021_BE.Core.IServices;
+using Tsak.WebshopProducts_2021_BE.Core.Models;
 using Tsak.WebshopProducts2021.WebApi.Dtos;
 
 namespace Tsak.WebshopProducts2021.WebApi.Controllers
@@ -39,7 +40,22 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             {
                 return StatusCode(500, e.Message);
             }
-           
+        }
+
+        [HttpPost]
+        public ActionResult<ProductDto> Create([FromBody] Product product)
+        {
+            if (string.IsNullOrEmpty(product.Name))
+            {
+                return BadRequest("Name is required");
+            }
+            _productService.Create(product);
+            ProductDto productDto = new ProductDto
+            {
+                Id = product.Id,
+                Name = product.Name
+            };
+            return productDto;
         }
     }
 }
