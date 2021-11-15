@@ -39,5 +39,12 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
                 Name = productEntity.Name
             };
         }
+
+        public void Delete(Product product)
+        {
+            ProductEntity productEntity = _ctx.Products.FirstOrDefault(p => p.Id == product.Id);
+            _ctx.Products.Remove(productEntity);
+            _ctx.SaveChanges();
+        }
     }
 }

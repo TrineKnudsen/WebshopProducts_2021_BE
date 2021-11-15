@@ -5,6 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Tsak.WebshopProducts_2021_BE.Core.Test\Tsak.WebshopProducts_2021_BE.Core.Test.csproj" />
       <ProjectReference Include="..\Tsak.WebshopProducts_2021_BE.Core\Tsak.WebshopProducts_2021_BE.Core.csproj" />
     </ItemGroup>
 

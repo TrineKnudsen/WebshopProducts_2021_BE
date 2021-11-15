@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Castle.Core.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using Tsak.WebshopProducts_2021_BE.Core.IServices;
@@ -57,8 +58,21 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             };
             return productDto;
         }
-        
+
         [HttpPut]
         public ActionResult<ProductDto> Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(Product product)
+        {
+            if (product.Id.ToString().IsNullOrEmpty())
+            {
+                BadRequest("Choose id");
+            }
+            _productService.Delete(product);
+        }
     }
 }

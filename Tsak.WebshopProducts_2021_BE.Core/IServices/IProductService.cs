@@ -8,5 +8,6 @@ namespace Tsak.WebshopProducts_2021_BE.Core.IServices
     {
         List<Product> GetAll();
         Product Create(Product productDto);
+        void Delete(Product product);
     }
 }
