@@ -70,6 +70,7 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             _productService.Delete(product);
         }
 
+        [HttpPut("{id}")]
         public Product Update(Product productToUpdate)
         {
             if (productToUpdate != null)
