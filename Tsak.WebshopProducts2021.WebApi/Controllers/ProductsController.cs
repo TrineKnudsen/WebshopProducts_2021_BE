@@ -57,5 +57,8 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             };
             return productDto;
         }
+        
+        [HttpPut]
+        public ActionResult<ProductDto> Update()
     }
 }
