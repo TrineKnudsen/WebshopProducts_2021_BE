@@ -7,6 +7,10 @@ namespace Tsak.WebshopProducts_2021_BE.Domain.IRepositories
     {
         List<Product> ReadAll();
         Product Create(Product product);
+
         void Delete(Product product);
+
+        Product Update(Product productToUpdate);
+
     }
 }

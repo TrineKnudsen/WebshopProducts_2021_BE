@@ -59,12 +59,6 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             return productDto;
         }
 
-        [HttpPut]
-        public ActionResult<ProductDto> Update()
-        {
-            throw new NotImplementedException();
-        }
-
         [HttpDelete("{id}")]
         public void Delete(Product product)
         {
@@ -72,7 +66,20 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             {
                 BadRequest("Choose id");
             }
+
             _productService.Delete(product);
+        }
+
+        public Product Update(Product productToUpdate)
+        {
+            if (productToUpdate != null)
+            {
+                return _productService.Update(productToUpdate);
+            }
+            
+            throw new Exception("Missing input");
+
+
         }
     }
 }
