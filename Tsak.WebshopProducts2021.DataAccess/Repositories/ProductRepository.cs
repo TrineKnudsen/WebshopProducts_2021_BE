@@ -35,12 +35,14 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
                 Name = product.Name
             };
             _ctx.Products.Add(productEntity);
-
+            _ctx.SaveChanges();
+            
             return new Product
             {
                 Id = productEntity.Id,
                 Name = productEntity.Name
             };
+            
         }
 
 

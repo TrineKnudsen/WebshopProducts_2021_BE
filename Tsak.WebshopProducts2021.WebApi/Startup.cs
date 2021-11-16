@@ -38,10 +38,8 @@ namespace Tsak.WebshopProducts2021.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Tsak.WebshopProducts2021.WebApi", Version = "v1"});
             });
-            services.AddCors(
-                opt => opt
-                    .AddPolicy("dev-policy",
-                        policy =>
+            services.AddCors(opt =>
+                opt.AddPolicy("dev-policy", policy =>
                         {
                             policy
                                 .AllowAnyOrigin()
@@ -66,15 +64,12 @@ namespace Tsak.WebshopProducts2021.WebApi
                 app.UseSwaggerUI(c =>
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tsak.WebshopProducts2021.WebApi v1"));
                 app.UseCors("dev-policy");
-                ctx.Database.EnsureDeleted();
-                ctx.Database.EnsureCreated();
-                ctx.Products.AddRange(new List<ProductEntity>
-                {
-                    new () {Name = "Ost"},
-                    new () {Name = "Ostekage"},
-                    new () {Name = "Brie"},
-                });
-                ctx.SaveChanges();
+                new DbSeeder(ctx).SeedDevelopment();
+                //ctx.SaveChanges();
+            }
+            else
+            {
+                new DbSeeder(ctx).SeedProduction();
             }
 
             app.UseHttpsRedirection();
