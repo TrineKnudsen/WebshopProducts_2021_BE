@@ -36,7 +36,6 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
             };
             _ctx.Products.Add(productEntity);
             _ctx.SaveChanges();
-            
             return new Product
             {
                 Id = productEntity.Id,
@@ -44,11 +43,10 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
             };
             
         }
-
-
-        public void Delete(Product product)
+        
+        public void Delete(int id)
         {
-            ProductEntity productEntity = _ctx.Products.FirstOrDefault(p => p.Id == product.Id);
+            ProductEntity productEntity = _ctx.Products.FirstOrDefault(p => p.Id == id);
             _ctx.Products.Remove(productEntity);
             _ctx.SaveChanges();
 

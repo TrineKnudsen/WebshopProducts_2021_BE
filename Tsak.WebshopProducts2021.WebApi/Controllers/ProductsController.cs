@@ -60,14 +60,9 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void Delete(Product product)
+        public void Delete(int id)
         {
-            if (product.Id.ToString().IsNullOrEmpty())
-            {
-                BadRequest("Choose id");
-            }
-
-            _productService.Delete(product);
+            _productService.Delete(id);
         }
 
         [HttpPut("{id}")]
@@ -79,8 +74,6 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             }
             
             throw new Exception("Missing input");
-
-
         }
     }
 }

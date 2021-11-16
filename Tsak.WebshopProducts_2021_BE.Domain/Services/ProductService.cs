@@ -30,11 +30,10 @@ namespace Tsak.WebshopProducts_2021_BE.Domain.Services
         {
             return _productRepository.Create(product);
         }
-
-
-        public void Delete(Product product)
+        
+        public void Delete(int id)
         {
-            _productRepository.Delete(product);
+            _productRepository.Delete(id);
         }
         
 
