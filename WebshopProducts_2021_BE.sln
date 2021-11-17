@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsak.WebshopProducts2021.DataAccess", "Tsak.WebshopProducts2021.DataAccess\Tsak.WebshopProducts2021.DataAccess.csproj", "{8A751B70-BDAC-4667-9E92-992FC2DEA71A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{44B8024B-DE94-4C59-8871-A60C535F0B07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsak.WebshopProducts2021.Security", "Tsak.WebshopProducts2021.Security\Tsak.WebshopProducts2021.Security.csproj", "{FA3CFB38-1032-4C2F-B07B-B2047FCC4A53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,7 @@ Global
 		{B197080C-6D36-490D-96B9-8B77D66D35B8} = {6BE29194-1FF7-4119-8BF2-2C44D580BA77}
 		{B950DAE8-E0FE-4D8B-B314-20BBA8B8233D} = {104BBE67-4481-4C1D-BF88-187674A5551A}
 		{8A751B70-BDAC-4667-9E92-992FC2DEA71A} = {A4BE62D5-C54F-40F9-8636-25A40FED0C4A}
+		{FA3CFB38-1032-4C2F-B07B-B2047FCC4A53} = {44B8024B-DE94-4C59-8871-A60C535F0B07}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1D974DA5-2ED8-4C4A-B35D-0CCB95F45EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +63,9 @@ Global
 		{8A751B70-BDAC-4667-9E92-992FC2DEA71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A751B70-BDAC-4667-9E92-992FC2DEA71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A751B70-BDAC-4667-9E92-992FC2DEA71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA3CFB38-1032-4C2F-B07B-B2047FCC4A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA3CFB38-1032-4C2F-B07B-B2047FCC4A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA3CFB38-1032-4C2F-B07B-B2047FCC4A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA3CFB38-1032-4C2F-B07B-B2047FCC4A53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

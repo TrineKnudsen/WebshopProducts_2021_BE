@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Tsak.WebshopProducts2021.DataAccess\Tsak.WebshopProducts2021.DataAccess.csproj" />
+      <ProjectReference Include="..\Tsak.WebshopProducts2021.Security\Tsak.WebshopProducts2021.Security.csproj" />
       <ProjectReference Include="..\Tsak.WebshopProducts_2021_BE.Domain\Tsak.WebshopProducts_2021_BE.Domain.csproj" />
     </ItemGroup>
 

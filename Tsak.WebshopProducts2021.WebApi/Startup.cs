@@ -18,6 +18,8 @@ using Tsak.WebshopProducts_2021_BE.Domain.Services;
 using Tsak.WebshopProducts2021.DataAccess;
 using Tsak.WebshopProducts2021.DataAccess.Entities;
 using Tsak.WebshopProducts2021.DataAccess.Repositories;
+using Tsak.WebshopProducts2021.Security;
+using Tsak.WebshopProducts2021.Security.Services;
 
 namespace Tsak.WebshopProducts2021.WebApi
 {
@@ -48,9 +50,15 @@ namespace Tsak.WebshopProducts2021.WebApi
                         }));
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IAuthService, AuthService>();
             services.AddDbContext<MainDBContext>(opt =>
             {
                 opt.UseSqlite("Data Source=main.db");
+            });
+
+            services.AddDbContext<AuthDbContext>(opt =>
+            {
+                opt.UseSqlite("Data source=auth.db");
             });
         }
 
