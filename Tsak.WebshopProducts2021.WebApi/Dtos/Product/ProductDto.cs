@@ -6,5 +6,6 @@ namespace Tsak.WebshopProducts2021.WebApi.Dtos
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int OwnerId { get; set; }
     }
 }

@@ -10,5 +10,7 @@ namespace Tsak.WebshopProducts_2021_BE.Domain.IRepositories
 
         Product Update(Product productToUpdate);
         void Delete(int id);
+
+        List<Product> ReadMyProducts(int userId);
     }
 }

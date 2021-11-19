@@ -12,4 +12,8 @@
       <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.14.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Tsak.WebshopProducts2021.DataAccess\Tsak.WebshopProducts2021.DataAccess.csproj" />
+    </ItemGroup>
+
 </Project>

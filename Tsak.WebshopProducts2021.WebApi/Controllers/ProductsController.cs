@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Castle.Core.Internal;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using Tsak.WebshopProducts_2021_BE.Core.IServices;
@@ -20,6 +21,7 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             _productService = productService;
         }
         
+        [Authorize(Policy = "ProductsReader")]
         [HttpGet]
         public ActionResult<ProductsDto> ReadAll()
         {
@@ -29,7 +31,8 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
                     .Select(p => new ProductDto
                     {
                         Id = p.Id,
-                        Name = p.Name
+                        Name = p.Name,
+                        OwnerId = p.OwnerId
                     })
                     .ToList();
                 return Ok(new ProductsDto
@@ -64,16 +67,22 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
         {
             _productService.Delete(id);
         }
-
+        
+        [Authorize(Policy = "ProductsManager")]
         [HttpPut("{id}")]
-        public Product Update(Product productToUpdate)
+        public ActionResult<Product> Update(int id, ProductDto productDtoToUpdate)
         {
-            if (productToUpdate != null)
+            if (id != productDtoToUpdate.Id)
             {
-                return _productService.Update(productToUpdate);
+                return BadRequest("Ids dont match");
             }
-            
-            throw new Exception("Missing input");
+            var product = _productService.Update(new Product
+            {
+                Id = productDtoToUpdate.Id,
+                Name = productDtoToUpdate.Name,
+                OwnerId = productDtoToUpdate.OwnerId
+            });
+            return Ok(productDtoToUpdate);
         }
     }
 }

@@ -22,9 +22,20 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
                 .Select(pe => new Product
                 {
                     Id = pe.Id,
-                    Name = pe.Name
+                    Name = pe.Name,
+                    OwnerId = pe.OwnerId
                 })
                 .ToList();
+        }
+
+        public List<Product> ReadMyProducts(int userId)
+        {
+            return _ctx.Products.Where(p => p.OwnerId == userId)
+                .Select(p => new Product()
+                {
+                    Id = p.Id,
+                    Name = p.Name
+                }).ToList();
         }
 
         public Product Create(Product product)
@@ -54,16 +65,19 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
 
         public Product Update(Product productToUpdate)
         {
-            ProductEntity productEntity = _ctx.Products.SingleOrDefault(p => p.Id == productToUpdate.Id);
-
-            if (productEntity != null)
-            {
-                productEntity.Id = productToUpdate.Id;
-                productEntity.Name = productToUpdate.Name;
+            var pe = _ctx.Update(new ProductEntity
+                {
+                    Id = productToUpdate.Id,
+                    Name = productToUpdate.Name,
+                    OwnerId = productToUpdate.OwnerId
+                }).Entity;
                 _ctx.SaveChanges();
-            }
-
-            return productToUpdate;
+                return new Product
+                {
+                    Id = pe.Id,
+                    Name = pe.Name,
+                    OwnerId = pe.OwnerId
+                };
         }
     }
 }

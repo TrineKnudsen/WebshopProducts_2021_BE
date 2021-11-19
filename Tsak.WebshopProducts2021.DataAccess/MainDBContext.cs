@@ -7,6 +7,7 @@ namespace Tsak.WebshopProducts2021.DataAccess
     {
         public MainDBContext(DbContextOptions<MainDBContext> options): base(options) { }
         public DbSet<ProductEntity> Products { get; set; }
+        public virtual DbSet<UserEntity> Users { get; set; }
         
     }
 }

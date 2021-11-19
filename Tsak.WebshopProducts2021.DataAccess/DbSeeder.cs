@@ -14,10 +14,11 @@ namespace Tsak.WebshopProducts2021.DataAccess
         {
             _ctx.Database.EnsureDeleted();
             _ctx.Database.EnsureCreated();
-            _ctx.Products.Add(new ProductEntity {Name = "Ost"});
-            _ctx.Products.Add(new ProductEntity {Name = "OsteKage"});
-            _ctx.Products.Add(new ProductEntity {Name = "Brie"});
-            _ctx.Products.Add(new ProductEntity {Name = "Ostesovs"});
+            _ctx.Users.Add(new UserEntity { Name = "Bilbo" });
+            _ctx.SaveChanges();
+            _ctx.Products.AddRange(new ProductEntity {Name = "Ost", OwnerId = 1});
+            _ctx.Products.AddRange(new ProductEntity {Name = "OsteKage", OwnerId = 1});
+            _ctx.Products.AddRange(new ProductEntity {Name = "Brie", OwnerId = 1});
             _ctx.SaveChanges();
         }
 

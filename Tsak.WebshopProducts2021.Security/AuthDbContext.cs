@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Tsak.WebshopProducts2021.DataAccess.Entities;
 using Tsak.WebshopProducts2021.Security.Model;
 
 namespace Tsak.WebshopProducts2021.Security

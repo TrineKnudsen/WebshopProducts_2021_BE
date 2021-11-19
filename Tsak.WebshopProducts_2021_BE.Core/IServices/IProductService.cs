@@ -6,6 +6,7 @@ namespace Tsak.WebshopProducts_2021_BE.Core.IServices
 {
     public interface IProductService
     {
+        List<Product> GetMyProducts(int userId);
         List<Product> GetAll();
         Product Create(Product productDto);
 

@@ -21,6 +21,11 @@ namespace Tsak.WebshopProducts_2021_BE.Domain.Services
             _productRepository = productRepository;
         }
 
+        public List<Product> GetMyProducts(int userId)
+        {
+            return _productRepository.ReadMyProducts(userId);
+        }
+
         public List<Product> GetAll()
         {
             return _productRepository.ReadAll();
