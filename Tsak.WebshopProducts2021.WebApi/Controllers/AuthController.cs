@@ -23,7 +23,7 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             _authService = authService;
         }
         
-        [AllowAnonymous]
+        
         [HttpPost(nameof(Login))]
         public IActionResult Login([FromBody] LoginDto dto)
         {
@@ -39,7 +39,7 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             return Ok(new { Token = tokenString, Message = "Success" });
         }
         
-        [Authorize("ProfileReader")]
+        
         [HttpGet(nameof(GetProfile))]
         public ActionResult<ProfileDto> GetProfile()
         {

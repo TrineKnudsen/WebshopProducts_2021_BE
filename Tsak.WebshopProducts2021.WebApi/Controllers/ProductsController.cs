@@ -21,7 +21,7 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             _productService = productService;
         }
         
-        [Authorize(Policy = "ProductsReader")]
+        
         [HttpGet]
         public ActionResult<ProductsDto> ReadAll()
         {
@@ -68,7 +68,7 @@ namespace Tsak.WebshopProducts2021.WebApi.Controllers
             _productService.Delete(id);
         }
         
-        [Authorize(Policy = "ProductsManager")]
+        
         [HttpPut("{id}")]
         public ActionResult<Product> Update(int id, ProductDto productDtoToUpdate)
         {

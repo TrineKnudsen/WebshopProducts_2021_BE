@@ -43,14 +43,16 @@ namespace Tsak.WebshopProducts2021.DataAccess.Repositories
             ProductEntity productEntity = new ProductEntity
             {
                 Id = product.Id,
-                Name = product.Name
+                Name = product.Name,
+                OwnerId = product.OwnerId
             };
             _ctx.Products.Add(productEntity);
             _ctx.SaveChanges();
             return new Product
             {
                 Id = productEntity.Id,
-                Name = productEntity.Name
+                Name = productEntity.Name,
+                OwnerId = productEntity.OwnerId
             };
             
         }
